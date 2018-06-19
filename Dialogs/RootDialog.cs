@@ -32,7 +32,7 @@ namespace OmnBotQnamaker.Dialogs
             await context.Forward(new AzureDialog(), ResumeAfterQnADialog, activity, CancellationToken.None);
 
             // use qnamaker som backend
-            ((await context.Forward(new CustomQnADialog(), ResumeAfterQnADialog, activity, CancellationToken.None);
+            //await context.Forward(new CustomQnADialog(), ResumeAfterQnADialog, activity, CancellationToken.None);
 
             // Different backends options
             //if (activity.Text.StartsWith (".azure"))
@@ -83,9 +83,9 @@ namespace OmnBotQnamaker.Dialogs
                     case 2:
                         await context.Forward(new CustomQnADialog(), ResumeAfterQnADialog, activity, CancellationToken.None);
                         break;
-                    case 3:
-                        await context.Forward(new QnATest(), ResumeAfterQnADialog, activity, CancellationToken.None);
-                        break;
+                    //case 3:
+                    //    await context.Forward(new QnATest(), ResumeAfterQnADialog, activity, CancellationToken.None);
+                    //    break;
                     default:
                         await context.Forward(new AzureDialog(), ResumeAfterQnADialog, activity, CancellationToken.None);
                         break;

@@ -47,7 +47,7 @@ namespace OmnBotQnamaker
                 // Not available in all channels
                 if (message.MembersAdded.Any(o => o.Id == message.Recipient.Id))
                 {
-                    var reply = message.CreateReply("Ask a question.");
+                    var reply = message.CreateReply("Hello! Feel free to ask a question.");
                     ConnectorClient connector = new ConnectorClient(new System.Uri(message.ServiceUrl));
                     connector.Conversations.ReplyToActivity(reply);
                 }
